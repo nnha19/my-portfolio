@@ -26,7 +26,10 @@ const Home = () => {
         <p className="home__secondary-header">
           I am a <span className="occupation">Web Developer,</span>{" "}
           <span className="base">
-            based in Myanmar <b>({time})</b>
+            based in Myanmar{" "}
+            <b>
+              ( <i class="far fa-clock"></i> {time})
+            </b>
           </span>
         </p>
         <button className="home__btn">View Projects</button>
