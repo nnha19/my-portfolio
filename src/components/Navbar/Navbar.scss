@@ -1,4 +1,16 @@
 @import "../../index.scss";
+
+@mixin hamburgerPsuedos {
+  content: "";
+  width: 100%;
+  display: block;
+  height: 100%;
+  background: white;
+  position: absolute;
+  transform: translateY(0.4rem);
+  transition: all 0.4s linear;
+}
+
 .nav {
   height: 4rem;
   display: flex;
@@ -13,7 +25,7 @@
     display: flex;
     list-style: none;
     align-items: center;
-
+    transition: all 0.4s linear;
     @media (max-width: $mdScreen) {
       position: fixed;
       top: 0;
@@ -23,6 +35,7 @@
       background: grey;
       flex-direction: column;
       justify-content: center;
+      transform: translateX(41rem);
     }
   }
   &__list {
@@ -89,21 +102,60 @@
   }
 }
 
-.nav-hidden {
+.show-nav {
+  transition: all 0.4s linear;
   @media (max-width: $mdScreen) {
-    display: none;
+    transform: translateX(0);
   }
 }
 
 .hamburger-container {
+  cursor: pointer;
   z-index: 10;
+  width: 4rem;
+  height: 90%;
+  border-radius: 50%;
+  background: $primary-color;
+  position: relative;
   @media (min-width: $mdScreen) {
     display: none;
+  }
+}
+.hamburger {
+  width: 2rem;
+  height: 2px;
+  background: white;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s linear;
+  &::before {
+    @include hamburgerPsuedos;
+  }
+  &::after {
+    @include hamburgerPsuedos;
+    transform: translateY(-0.4rem);
   }
 }
 
 @media (max-width: $mdScreen) {
   .github {
     display: none;
+  }
+}
+
+.nav-show-hamburger {
+  background: transparent;
+  transition: all 0.4s linear;
+
+  &::before {
+    transition: all 0.4s linear;
+    transform: rotate(45deg);
+  }
+  &::after {
+    transition: all 0.4s linear;
+    transform: rotate(-45deg);
   }
 }

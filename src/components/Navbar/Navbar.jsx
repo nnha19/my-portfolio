@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav className="nav wrapper">
       <h1 className="nav__logo">Logo</h1>
 
-      <ul className={`nav__lists ${!showNav ? "nav-hidden" : undefined} `}>
+      <ul className={`nav__lists ${showNav ? "show-nav" : undefined} `}>
         <li className="nav__list nav__item">Projects</li>
         <li className="nav__list nav__item">About</li>
         <li className="nav__list nav__item">Contact</li>
@@ -35,8 +35,10 @@ const Navbar = () => {
           <i className="fab fa-github"></i>
         </a>
       )}
-      <div onClick={() => setShowNav(true)} className="hamburger-container">
-        <span className="hamburger">Hamburger</span>
+      <div onClick={() => setShowNav(!showNav)} className="hamburger-container">
+        <span
+          className={`hamburger ${showNav ? "nav-show-hamburger" : undefined}`}
+        ></span>
       </div>
     </nav>
   );
