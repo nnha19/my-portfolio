@@ -24,11 +24,13 @@ const Home = () => {
       <div className="home__left">
         <h2 className="home__primary-header">Hello, I am Nyi Nyi</h2>
         <p className="home__secondary-header">
-          I am a <span className="occupation">Web Developer,</span>{" "}
+          I am a <span className="occupation">Web Developer</span>{" "}
           <span className="base">
-            based in Myanmar{" "}
+            based in Pyin Oo Lwin, Myanmar{" "}
             <b>
-              ( <i class="far fa-clock"></i> {time})
+              <p>
+                ( <i class="far fa-clock"></i> {time})
+              </p>
             </b>
           </span>
         </p>
