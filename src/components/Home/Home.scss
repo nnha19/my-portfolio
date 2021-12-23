@@ -1,14 +1,16 @@
-$primary-color: #0037ac;
+@import "../../index.scss";
 
 .wrapper {
   padding-left: 6rem;
   padding-right: 6rem;
 }
 .home {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
   &__left {
     flex-basis: 40%;
     margin-right: 2rem;
