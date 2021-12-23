@@ -13,6 +13,20 @@ body {
   color: $primary-color;
   margin-bottom: 1rem;
 }
+@mixin primaryBtn {
+  padding: 0.6rem 2rem;
+  background-color: none;
+  outline: none;
+  border: 1px solid primary-color;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  border-radius: 6px;
+}
+@mixin primaryBtnHover {
+  background-color: $primary-color;
+  color: white;
+}
 
 $primary-color: #0037ac;
 

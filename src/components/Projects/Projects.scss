@@ -16,18 +16,9 @@
     margin: 2rem 0;
   }
   &__btn {
-    padding: 0.6rem 2rem;
-    background-color: none;
-    outline: none;
-    border: 1px solid rgba(0, 0, 255, 0.2);
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.2s linear;
-    border-radius: 6px;
-
+    @include primaryBtn;
     &:hover {
-      background-color: $primary-color;
-      color: white;
+      @include primaryBtnHover;
     }
   }
   &__btn:first-child {
