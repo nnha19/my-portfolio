@@ -30,8 +30,34 @@ body {
 
 $primary-color: #0037ac;
 
+$xlScreen: 1400px;
+$screen1200: 1200px;
+$bgScreen: 1000px;
+$mdScreen: 800px;
+$smScreen: 600px;
+$xsScreen: 400;
+
+.wrapper {
+  padding-left: 6rem;
+  padding-right: 6rem;
+
+  @media (max-width: $screen1200) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  @media (max-width: $smScreen) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+html {
+  @media (max-width: $bgScreen) {
+    font-size: 75%;
+  }
 }

@@ -1,19 +1,20 @@
 @import "../../index.scss";
 
-.wrapper {
-  padding-left: 6rem;
-  padding-right: 6rem;
-}
 .home {
   height: 90vh;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 60%;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   line-height: 1.5;
 
+  @media (max-width: $mdScreen) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
   &__left {
-    flex-basis: 40%;
     margin-right: 2rem;
     margin-top: -2rem;
   }
@@ -49,7 +50,9 @@
   }
 
   &__right {
-    flex-basis: 60%;
+    @media (max-width: $mdScreen) {
+      display: none;
+    }
   }
   &__img {
     height: 100%;

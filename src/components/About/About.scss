@@ -3,12 +3,22 @@
   padding-top: 3rem;
   padding-bottom: 3rem;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 40% 60%;
   gap: 1rem;
   align-items: center;
   font-size: 1.2rem;
   line-height: 1.6;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+  @media (max-width: $bgScreen) {
+    grid-template-columns: 1fr;
+  }
+
+  .about__img {
+    @media (max-width: $bgScreen) {
+      display: none;
+    }
+  }
 
   &__header {
     @include primaryHeader;

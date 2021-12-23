@@ -7,7 +7,7 @@ const Skills = () => {
   return (
     <div className="skills wrapper">
       <h2 className="skills__header">My Skills</h2>
-      <p>
+      <p style={{ fontSize: "1.2rem" }}>
         As of now, these are the skills I have been working with and I am open
         and eager to learn any new skills required.
       </p>

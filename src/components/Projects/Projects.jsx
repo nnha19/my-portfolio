@@ -70,7 +70,7 @@ const Projects = () => {
   const projectList = projects.map((project, index) => {
     return (
       <div key={index} className="project wrapper">
-        <div>
+        <div className="project__about">
           <h3 className="project__header">{project.name}</h3>
           <div>
             <h4 className="project__description">Project Description</h4>
