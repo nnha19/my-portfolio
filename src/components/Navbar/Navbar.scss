@@ -5,10 +5,25 @@
   justify-content: space-between;
   align-items: center;
 
+  &__logo {
+    z-index: 10;
+  }
+
   &__lists {
     display: flex;
     list-style: none;
     align-items: center;
+
+    @media (max-width: $mdScreen) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: grey;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
   &__list {
     margin: 0 1rem;
@@ -17,8 +32,16 @@
     transition: all 0.2s linear;
     position: relative;
 
+    @media (max-width: $mdScreen) {
+      font-size: 2rem;
+      margin: 1rem 0;
+    }
+
     i {
       font-size: 2rem;
+      @media (max-width: $mdScreen) {
+        font-size: 4rem;
+      }
     }
 
     &:hover {
@@ -46,5 +69,41 @@
     &:hover {
       @include primaryBtnHover;
     }
+    @media (max-width: $mdScreen) {
+      font-size: 1.4rem;
+    }
+  }
+  &__github {
+    z-index: 10;
+    font-size: 2rem;
+    color: unset;
+    transition: all 0.2s linear;
+
+    &:hover {
+      color: $primary-color;
+    }
+
+    @media (min-width: $mdScreen) {
+      display: none;
+    }
+  }
+}
+
+.nav-hidden {
+  @media (max-width: $mdScreen) {
+    display: none;
+  }
+}
+
+.hamburger-container {
+  z-index: 10;
+  @media (min-width: $mdScreen) {
+    display: none;
+  }
+}
+
+@media (max-width: $mdScreen) {
+  .github {
+    display: none;
   }
 }
