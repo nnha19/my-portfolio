@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Skills.scss";
-const Skills = () => {
-  const mySkills =
-    "html css javascript react redux typescript scss node express ";
+
+const Skills = ({ setSkillsRef }) => {
+  const skillsRef = useRef();
+
+  useEffect(() => {
+    setSkillsRef(skillsRef);
+  }, []);
 
   return (
-    <div className="skills wrapper">
+    <div ref={skillsRef} className="skills wrapper">
       <h2 className="skills__header">My Skills</h2>
       <p style={{ fontSize: "1.2rem" }}>
         As of now, these are the skills I have been working with and I am open

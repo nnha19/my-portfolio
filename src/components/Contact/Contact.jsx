@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Contact.scss";
 
-const Contact = () => {
+const Contact = ({ setContactRef }) => {
+  const contactRef = useRef();
+
+  useEffect(() => {
+    setContactRef(contactRef);
+  }, []);
+
   return (
-    <div className="contact wrapper">
+    <div ref={contactRef} className="contact wrapper">
       <h2 className="contact__header">Contact</h2>
       <p className="contact__paragraph">
         I am actively looking for an opportunity. If you have one to offer or

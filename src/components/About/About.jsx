@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./About.scss";
-const About = () => {
+const About = ({ setAboutRef }) => {
+  const aboutRef = useRef();
+
+  useEffect(() => {
+    setAboutRef(aboutRef);
+  }, []);
+
   return (
-    <div className="about wrapper">
+    <div ref={aboutRef} className="about wrapper">
       <div>
         <h4 className="about__header">About Me</h4>
         <p>

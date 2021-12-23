@@ -16,6 +16,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: 100vw;
+  background: white;
 
   &__logo {
     z-index: 10;
@@ -35,7 +38,7 @@
       background: grey;
       flex-direction: column;
       justify-content: center;
-      transform: translateX(41rem);
+      transform: translateX(60rem);
     }
   }
   &__list {

@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Projects.scss";
 import project1Img from "../../assets/images/project1.png";
 import project2Img from "../../assets/images/project2.png";
 import project3Img from "../../assets/images/project3.png";
 
-const Projects = () => {
+const Projects = ({ setProjectsRef }) => {
+  const projectsRef = useRef();
+
+  useEffect(() => {
+    setProjectsRef(projectsRef);
+  });
   const projects = [
     {
       name: "Vlist",
@@ -107,7 +112,7 @@ const Projects = () => {
   });
 
   return (
-    <div className="projects ">
+    <div ref={projectsRef} className="projects ">
       <h1 className="projects__header">My Works</h1>
       {projectList}
     </div>

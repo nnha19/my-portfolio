@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Home.scss";
-const Home = () => {
+const Home = ({ projectsRef }) => {
   function getTime() {
     const days = "Mon Tue Wed Thu Fri Sat Sun".split(" ");
     const myanmarTime = new Date();
@@ -34,7 +34,14 @@ const Home = () => {
             </b>
           </span>
         </p>
-        <button className="home__btn">View Projects</button>
+        <button
+          onClick={() =>
+            projectsRef.current.scrollIntoView({ behavior: "smooth" })
+          }
+          className="home__btn"
+        >
+          View Projects
+        </button>
       </div>
       <div className="home__right">
         <img
