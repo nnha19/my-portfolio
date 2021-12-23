@@ -1,0 +1,50 @@
+@import "../../index.scss";
+.nav {
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__lists {
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  &__list {
+    margin: 0 1rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.2s linear;
+    position: relative;
+
+    i {
+      font-size: 2rem;
+    }
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__item {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: $primary-color;
+      transition: all 0.2s linear;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+  }
+  &__btn {
+    @include primaryBtn;
+    &:hover {
+      @include primaryBtnHover;
+    }
+  }
+}
