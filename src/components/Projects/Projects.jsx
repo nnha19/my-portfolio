@@ -23,7 +23,7 @@ const Projects = ({ setProjectsRef }) => {
         "MongoDB",
       ],
       description:
-        "  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Undemollitia sunt, cumque odit nesciunt, omnis vel quo dolorum tenetur eligendi laboriosam quis veritatis dignissimos quia eos ea  molestias aliquam tempore.",
+        "  Vlist allows users to save the vocabularies. Users can add a vocabulary to their list, get the definition of that vocabulary from third party api or add it manually. Users can also add the example sentences and resource. Users can search and filter the vocabularies by resources. If users want to be notified when another user adds a vocabulary to their list, they can ring noti bell and will receive notifications.",
       img: "https://vlist2021.netlify.app/static/media/vlist.5aca9293.png",
       websiteLink: "https://vlist2021.netlify.app",
       githubLink: "https://github.com/nnha19/VList",
@@ -33,13 +33,14 @@ const Projects = ({ setProjectsRef }) => {
       websiteLink: "https://maymyovision.netlify.app",
       githubLink: "https://github.com/nnha19/Ecommerce",
       img: project1Img,
-      description: "Lorem Ipsum",
+      description:
+        "This is an ecommerce website where users can view sunglasses, filter the products, ask questions about a product and admin will be able to answer, give rating and review to the product, add the products to their cart and apply discount coupons to get the disscount.",
       techs: ["HTML", "CSS", "React.js", "Express.js", "Node.js", "MongoDB"],
     },
     {
       name: "Netflix Clone",
       description:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Undemollitia sunt, cumque odit nesciunt, omnis vel quo dolorum tenetur eligendi laboriosam quis veritatis dignissimos quia eos ea  molestias aliquam tempore.",
+        "Users can search plenty of movies from TBDBAPI, add their favourite movies to their list, like and dislike the movies.",
       techs: [
         "HTML",
         "CSS",
@@ -57,7 +58,8 @@ const Projects = ({ setProjectsRef }) => {
     {
       name: "Place Sharing",
       img: project3Img,
-      description: "lorem ipsum is blah blah blah",
+      description:
+        "This website allows users to share the places they have been. If authenticated, user can add the places and other users will be able to see it, like it, comment on it and give rating to that place. For all of these actions taken by other users, place owner will get notifications.",
       techs: [
         "HTML",
         "CSS",

@@ -22,6 +22,7 @@
 
   &__logo {
     z-index: 10;
+    @include primaryHeader;
   }
 
   &__lists {

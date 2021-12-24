@@ -13,7 +13,7 @@ const Navbar = ({ aboutRef, contactRef, projectsRef, skillsRef }) => {
 
   return (
     <nav className="nav wrapper">
-      <h1 className="nav__logo">Logo</h1>
+      <h1 className="nav__logo">Nyi</h1>
 
       <ul className={`nav__lists ${showNav ? "show-nav" : undefined} `}>
         <li
