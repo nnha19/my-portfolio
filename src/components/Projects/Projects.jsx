@@ -98,12 +98,12 @@ const Projects = ({ setProjectsRef }) => {
           <div className="links">
             <a target="_blank" href={project.websiteLink}>
               <button className="project__btn">
-                <i class="fas fa-globe"></i> <span>View Live</span>
+                <i className="fas fa-globe"></i> <span>View Live</span>
               </button>
             </a>
             <a target="_blank" href={project.githubLink}>
               <button className="project__btn">
-                <i class="fab fa-github"></i> <span>View Code</span>
+                <i className="fab fa-github"></i> <span>View Code</span>
               </button>
             </a>
           </div>

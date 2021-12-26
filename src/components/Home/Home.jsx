@@ -8,7 +8,6 @@ const Home = ({ projectsRef }) => {
     const mins = myanmarTime.getMinutes().toString().padStart(2, 0);
     const secs = myanmarTime.getSeconds().toString().padStart(2, 0);
     const day = myanmarTime.getDay();
-    console.log(day);
     return `${hours}:${mins}:${secs} ${days[day]}`;
   }
   const [time, setTime] = useState(getTime());
@@ -28,9 +27,9 @@ const Home = ({ projectsRef }) => {
           <span className="base">
             based in Pyin Oo Lwin, Myanmar{" "}
             <b>
-              <p>
-                ( <i class="far fa-clock"></i> {time})
-              </p>
+              <span style={{ display: "block" }}>
+                ( <i className="far fa-clock"></i> {time})
+              </span>
             </b>
           </span>
         </p>

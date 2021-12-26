@@ -21,7 +21,7 @@ const Contact = ({ setContactRef }) => {
         <span>nyinyihmueaung19@gmail.com</span>
       </div>
       <div className="contact__via contact__email">
-        <i class="fas fa-phone"></i>
+        <i className="fas fa-phone"></i>
         <span>+95 9768290598 (Prefer to be contacted via email)</span>
       </div>
       <div className="social-links">
