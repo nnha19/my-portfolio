@@ -47,7 +47,7 @@ const Navbar = ({ aboutRef, contactRef, projectsRef, skillsRef }) => {
         </li>
         <li className="nav__list">
           <a
-            href="https://drive.google.com/file/d/1T8jkspLIFrmAhjsBGTeyv5FeMW6KfQFG/view?usp=sharing"
+            href="https://drive.google.com/file/d/1Qfqt9zZC4X7WLhBaQ0W_zPt7V-3hDqnd/view?usp=sharing"
             target="_blank"
           >
             <button className="nav__btn">Resume</button>

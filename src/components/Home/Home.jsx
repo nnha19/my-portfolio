@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import "./Home.scss";
 const Home = ({ projectsRef }) => {
   function getTime() {
-    const days = "Mon Tue Wed Thu Fri Sat Sun".split(" ");
+    const days = "Sun Mon Tue Wed Thu Fri Sat".split(" ");
     const myanmarTime = new Date();
     const hours = myanmarTime.getHours().toString().padStart(2, 0);
     const mins = myanmarTime.getMinutes().toString().padStart(2, 0);
     const secs = myanmarTime.getSeconds().toString().padStart(2, 0);
     const day = myanmarTime.getDay();
-
-    return `${hours}:${mins}:${secs} ${days[day - 1]}`;
+    console.log(day);
+    return `${hours}:${mins}:${secs} ${days[day]}`;
   }
   const [time, setTime] = useState(getTime());
 
